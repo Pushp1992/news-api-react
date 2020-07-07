@@ -1,4 +1,4 @@
-# This repository is meant for VIACOM-18
+# This repository is meant for NEWS API
 
 Runs the app in the development mode.<br>
 Open [http://localhost:7000](http://localhost:7000) to view it in the browser.
@@ -53,7 +53,7 @@ On prod machine:
 
 `npm run prod`
 
-# Server is created to handle the browser's CORS issue while making API calls for the HALAPLAY services
+# Server is created to handle the browser's CORS issue while making API calls for the newsorg.api services
 
 
 # Config changes
