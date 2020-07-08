@@ -2,10 +2,12 @@
 
 import React, { Component } from 'react';
 import { Row, Col, Container, CardGroup, Card, CardColumns } from "react-bootstrap";
+import {withRouter} from 'react-router-dom';
 
 // custom import
 import NewsService from '../../utils/service';
 import CustomToastr from '../../utils/toastr';
+import CardComponent from '../Cards/card';
 import '../NewsPage/newsPage.css';
 
 class NewsFeedPage extends Component {
@@ -49,29 +51,15 @@ class NewsFeedPage extends Component {
                 {
                     newsList.length !== 0 ?
                         <Row>
-                            {/* <CardGroup> */}
                             {
                                 newsList.map(data => {
                                     return (
                                         <Col key={data.source.id} md="4">
-                                            <Card id="card-style">
-                                                <Card.Img variant="top" src={data.urlToImage} />
-                                                <Card.Body>
-                                                    <Card.Title className="cardTitle">
-                                                        <Card.Link href={data.url} target="_">{data.title}</Card.Link>
-                                                    </Card.Title>
-                                                    <Card.Text className="cardText">{data.content}</Card.Text>
-                                                </Card.Body>
-                                                <Card.Footer>
-                                                    <small className="text-muted">{data.source.name}</small><br />
-                                                    <small className="text-muted">{data.publishedAt}</small>
-                                                </Card.Footer>
-                                            </Card>
+                                           <CardComponent data={data} />
                                         </Col>
                                     )
                                 })
                             }
-                            {/* </CardGroup> */}
                         </Row>
                         :
                         <div>
@@ -83,4 +71,4 @@ class NewsFeedPage extends Component {
     }
 }
 
-export default NewsFeedPage;
+export default withRouter(NewsFeedPage);

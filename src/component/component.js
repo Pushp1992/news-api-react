@@ -16,8 +16,8 @@ const HomePageComponent = () => {
     return <HomePage />
 }
 
-const SearchResultPageComponent = () => {
-    return <SearchResultPage />
+const SearchResultPageComponent = (props) => {
+    return <SearchResultPage {...props} />
 }
 
 const PageNotFoundComponent = () => {
@@ -47,7 +47,6 @@ const SearchBarComponent = () => {
 const NewsFeedPageComponent = () => {
     return <NewsFeedPage />
 }
-
 
 export {
     HomePageComponent, SearchResultPageComponent, PageNotFoundComponent, HeaderComponent,

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { SearchBarComponent } from '../component';
 
 const styles = {
     containerStyle: {
@@ -35,6 +36,9 @@ const styles = {
         fontSize: '2.25rem',
         fontWeight: '500',
         color: '#1a73e8'
+    },
+    searchComponent: {
+        paddingLeft: '40rem'
     }
 }
 
@@ -56,6 +60,9 @@ function NavBar() {
                         <Nav.Item>
                             <Nav.Link eventKey="link-3">Technology</Nav.Link>
                         </Nav.Item>
+                        <div style={styles.searchComponent}>
+                            <SearchBarComponent />
+                        </div>
                     </Nav>
                 </Col>
             </Row>

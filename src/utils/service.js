@@ -22,8 +22,8 @@ const NewsService = {
             console.error(error)
         }
     },
-    async getGeneData(id) {
-        const encodedURI = window.encodeURI(`/proxy/family/member/id/${id}?`);
+    async getSearchResult(searchParam) {
+        const encodedURI = window.encodeURI(`/proxy/v2/top-headlines?q=${searchParam.searchValue}&apiKey=${API_KEY}`);
 
         try {
             return await axios({

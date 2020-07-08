@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Row, Col, Container } from "react-bootstrap";
 
 // Custom component Import
-import { HeaderComponent, NavBarComponent, FooterComponent, SearchBarComponent, NewsFeedPageComponent } from '../component';
+import { HeaderComponent, NavBarComponent, FooterComponent, NewsFeedPageComponent } from '../component';
 
 class HomePage extends Component {
     constructor(props) {
