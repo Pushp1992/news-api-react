@@ -38,7 +38,7 @@ const styles = {
         color: '#1a73e8'
     },
     searchComponent: {
-        paddingLeft: '40rem'
+        paddingLeft: '50rem'
     }
 }
 

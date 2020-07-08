@@ -66,8 +66,8 @@ class SearchResultPage extends Component {
                                     }
                                 </Row>
                                 :
-                                <div>
-                                    <h2> There is no news feed to display right now.</h2>
+                                <div style={{height:'20rem'}}>
+                                    <h2 style={{marginTop:'6rem'}}>Hold tight, while we are getting latest result for you.</h2>
                                 </div>
                         }
                     </Container>

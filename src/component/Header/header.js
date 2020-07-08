@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import homeImage from '../../assets/images/home.png';
 
 const styles = {
     containerStyle: {
@@ -34,6 +36,11 @@ const styles = {
         fontSize: '2.25rem',
         fontWeight: '500',
         color: '#1a73e8'
+    },
+    homeImageStyle: {
+        width: '20px',
+        height: '20px',
+        marginTop: '30px'
     }
 }
 
@@ -46,6 +53,9 @@ function Header() {
                         <span style={styles.newsText}>American</span>
                         <span style={styles.apiText}>News</span>
                     </div>
+                </Col>
+                <Col md="1">
+                    <Link to={"/"}><img src={homeImage} style={styles.homeImageStyle}/></Link>
                 </Col>
             </Row>
         </Container>

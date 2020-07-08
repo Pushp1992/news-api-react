@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import { Row, Col, Container, Button } from "react-bootstrap";
 import CustomToastr from '../../utils/toastr';
 import { withRouter } from "react-router-dom";
+import searchImg from '../../assets/images/search.png';
 class SearchBar extends Component {
     constructor(props) {
         super(props)
@@ -23,12 +24,14 @@ class SearchBar extends Component {
     }
 
     passSearchValue(event) {
-        event.preventDefault();
-        if (this.state.searchValue === "") {
-            CustomToastr.warning("Please provide search input");
-            return;
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            if (this.state.searchValue === "") {
+                CustomToastr.warning("Please provide search input");
+                return;
+            }
+            this.props.history.push('/search-result', { searchInput: this.state });
         }
-        this.props.history.push('/search-result', { searchInput: this.state });
     }
 
     render() {
@@ -36,10 +39,9 @@ class SearchBar extends Component {
             <Container fluid>
                 <Row>
                     <Col>
-                        <input type="text" name='searchValue' value={this.state.searchValue} onChange={this.handleInputChange} />
-                    </Col>
-                    <Col>
-                        <Button variant="info" size="sm" onClick={(e) => this.passSearchValue(e)}>Info</Button>{' '}
+                        <input type="text" name='searchValue' value={this.state.searchValue}
+                            placeholder="search" onChange={this.handleInputChange} onKeyUp={(e) => this.passSearchValue(e)} />
+                        <br /><label style={{ fontSize: '10px' }}>Advance search</label>
                     </Col>
                 </Row>
             </Container>

@@ -46,7 +46,7 @@ class NewsFeedPage extends Component {
         return (
             <Container id="parent-view">
                 {
-                    loaderStatus ? <div>Hold tight, while we are getting latest byte for you</div> : null
+                    loaderStatus ? <div style={{height:'100px'}}>Hold tight, while we are getting latest byte for you</div> : null
                 }
                 {
                     newsList.length !== 0 ?
@@ -62,8 +62,8 @@ class NewsFeedPage extends Component {
                             }
                         </Row>
                         :
-                        <div>
-                            <h2> There is no news feed to display right now.</h2>
+                        <div style={{height:'20rem'}}>
+                            <h2 style={{marginTop:'6rem'}}>Hold tight, while we are getting latest byte for you</h2>
                         </div>
                 }
             </Container>
