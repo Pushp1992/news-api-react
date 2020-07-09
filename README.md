@@ -1,22 +1,8 @@
 # This repository is meant for NEWS API
 
-Runs the app in the development mode.<br>
+To Runs the app in the development mode.<br>
 Open [http://localhost:7000](http://localhost:7000) to view it in the browser.
 
-
-* It inlcudes 3 Input Fields
-
-1. Entering gene symbol e.g. BRAF.
-2. Entering position in a protein sequence e.g. 600.
-3. Entering amino acid letter e.g. V
-
-* Setup: Procedure:
-
-* Checkout the master branch of the repository.
-* Install the npm module required for the project.
-* npm install
-
-* In case of any concern, you can send your query to pushp.ranjansingh@gmail.com
 
 # To install all modules
 ___
@@ -26,32 +12,32 @@ Run npm install
 ___
 
 Run `npm install`
-
-# To install nodemon plugin for development
 ___
 
 # Please create blank .env file in the project root directory
+___
 
-Run `npm install -g nodemon`
+touch .env
 
 # On developement machine:
 
-Execute the following command to run the application (client + server)
+* Execute the following command to run the application (client + server)
+___
+
 `npm run dev`
 ___
 
 Run below command to start only client:
-`npm run start`
+___
+
+`npm run start` <br/>
 `client will run on the port 7000`
 
 Run below command to start only server:
-`npm run server`
+___
+
+`npm run server` <br/>
 `server will run on the port 5000`
-
-On prod machine:
- Run the following command
-
-`npm run prod`
 
 # Server is created to handle the browser's CORS issue while making API calls for the newsorg.api services
 
@@ -72,4 +58,31 @@ DEV config:
 
 ___
 
+# Application structure
+___
 
+# public 
+# src
+    -- assets
+        -- images
+    -- component
+        -- Cards
+        -- Footer
+        -- Header
+        -- HomePage
+        -- NavBar
+        -- NewsPage
+        -- NotFound
+        -- Search
+        -- SearchResultPage
+        -- component.js
+        -- routes.js
+    -- server
+        -- config
+        -- proxy
+        -- index.js
+    -- utils
+        -- service.js
+        -- toastr.js
+# .env
+# .gitignore
